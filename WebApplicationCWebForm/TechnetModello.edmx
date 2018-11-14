@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="sophyDB1Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="address">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="address" Type="nchar" MaxLength="20" />
+          <Property Name="citi" Type="nchar" MaxLength="10" />
+          <Property Name="state" Type="nchar" MaxLength="2" />
+          <Property Name="zip" Type="nchar" MaxLength="5" />
+          <Property Name="homePhone" Type="nchar" MaxLength="10" />
+          <Property Name="cellPhone" Type="nchar" MaxLength="10" />
+          <Property Name="lastUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Articoli">
+          <Key>
+            <PropertyRef Name="IdArticolo" />
+          </Key>
+          <Property Name="IdArticolo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodArt" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="DesArt" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CodFamiglia" Type="nvarchar" MaxLength="6" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Famiglie">
+          <Key>
+            <PropertyRef Name="CodFamiglia" />
+          </Key>
+          <Property Name="CodFamiglia" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="DesFamiglia" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'sophyDB1.dbo.Person' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="date" />
+        </EntityType>
+        <EntityType Name="personal">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="firstName" Type="nchar" MaxLength="10" />
+          <Property Name="lastName" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'sophyDB1.dbo.t1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="t1">
+          <Property Name="c1" Type="varchar" MaxLength="30" />
+          <Property Name="c2" Type="char" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'sophyDB1.dbo.t2' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="t2">
+          <Property Name="c1" Type="varchar" MaxLength="30" />
+          <Property Name="c2" Type="char" MaxLength="50" />
+        </EntityType>-->
+        <Function Name="personByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="personOrderByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="sophyDB1Model1StoreContainer">
+          <EntitySet Name="address" EntityType="Self.address" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Articoli" EntityType="Self.Articoli" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Famiglie" EntityType="Self.Famiglie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="personal" EntityType="Self.personal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person" EntityType="Self.Person" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Person].[Id] AS [Id], 
+    [Person].[Name] AS [Name], 
+    [Person].[DateOfBirth] AS [DateOfBirth]
+    FROM [dbo].[Person] AS [Person]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="sophyDB1Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="address">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="address1" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="citi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="state" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="zip" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="homePhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="cellPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="lastUpdate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Articoli">
+          <Key>
+            <PropertyRef Name="IdArticolo" />
+          </Key>
+          <Property Name="IdArticolo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodArt" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DesArt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CodFamiglia" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Famiglie">
+          <Key>
+            <PropertyRef Name="CodFamiglia" />
+          </Key>
+          <Property Name="CodFamiglia" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DesFamiglia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="personal">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="firstName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="lastName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="sophyDB1Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="addresses" EntityType="Self.address" />
+          <EntitySet Name="Articolis" EntityType="Self.Articoli" />
+          <EntitySet Name="Famiglies" EntityType="Self.Famiglie" />
+          <EntitySet Name="personals" EntityType="Self.personal" />
+          <EntitySet Name="People" EntityType="Self.Person" />
+          <FunctionImport Name="personByName" ReturnType="Collection(sophyDB1Model1.personByName_Result)">
+            <Parameter Name="Name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="personOrderByName" ReturnType="Collection(sophyDB1Model1.personOrderByName_Result)" />
+        </EntityContainer>
+        <ComplexType Name="personByName_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="personOrderByName_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sophyDB1Model1StoreContainer" CdmEntityContainer="sophyDB1Entities1">
+          <EntitySetMapping Name="addresses">
+            <EntityTypeMapping TypeName="sophyDB1Model1.address">
+              <MappingFragment StoreEntitySet="address">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="address1" ColumnName="address" />
+                <ScalarProperty Name="citi" ColumnName="citi" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="homePhone" ColumnName="homePhone" />
+                <ScalarProperty Name="cellPhone" ColumnName="cellPhone" />
+                <ScalarProperty Name="lastUpdate" ColumnName="lastUpdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Articolis">
+            <EntityTypeMapping TypeName="sophyDB1Model1.Articoli">
+              <MappingFragment StoreEntitySet="Articoli">
+                <ScalarProperty Name="IdArticolo" ColumnName="IdArticolo" />
+                <ScalarProperty Name="CodArt" ColumnName="CodArt" />
+                <ScalarProperty Name="DesArt" ColumnName="DesArt" />
+                <ScalarProperty Name="CodFamiglia" ColumnName="CodFamiglia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Famiglies">
+            <EntityTypeMapping TypeName="sophyDB1Model1.Famiglie">
+              <MappingFragment StoreEntitySet="Famiglie">
+                <ScalarProperty Name="CodFamiglia" ColumnName="CodFamiglia" />
+                <ScalarProperty Name="DesFamiglia" ColumnName="DesFamiglia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="personals">
+            <EntityTypeMapping TypeName="sophyDB1Model1.personal">
+              <MappingFragment StoreEntitySet="personal">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="People">
+            <EntityTypeMapping TypeName="sophyDB1Model1.Person">
+              <MappingFragment StoreEntitySet="Person">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="personByName" FunctionName="sophyDB1Model1.Store.personByName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sophyDB1Model1.personByName_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="personOrderByName" FunctionName="sophyDB1Model1.Store.personOrderByName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sophyDB1Model1.personOrderByName_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

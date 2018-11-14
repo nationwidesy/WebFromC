@@ -1,0 +1,7 @@
+﻿http://localhost:63999/Demo.aspx
+http://localhost:63999/WebApplicationCWebFormDemo.aspx
+
+Add Service Reference:
+Discover
+Service1
+OK
