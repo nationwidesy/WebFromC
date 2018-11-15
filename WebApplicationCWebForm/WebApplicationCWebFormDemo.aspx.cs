@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mail;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebApplicationCWebForm.App_Code;
 
 namespace WebApplicationCWebForm
 {
@@ -298,6 +299,32 @@ namespace WebApplicationCWebForm
             this.SelectDay.Visible = false;
             this.SelectMonth.Visible = false;
             this.Button11.Visible = false;
+        }
+
+        protected void Button12_Click(object sender, EventArgs e)
+        {
+            ArrayDemo array = new ArrayDemo();
+            this.ShowResult.Text = array.output;
+        }
+
+        protected void Button15_Click(object sender, EventArgs e)
+        {
+            this.ShowResult.Text = string.Empty;
+        }
+
+        protected void Button17_Click(object sender, EventArgs e)
+        {
+            this.ShowResult1.Text = string.Empty;
+        }
+
+        protected void Button16_Click(object sender, EventArgs e)
+        {
+            this.ShowResult0.Text = string.Empty;
+        }
+
+        protected void ShowResult1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     } 
 }

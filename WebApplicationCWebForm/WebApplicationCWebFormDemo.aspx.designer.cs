@@ -103,6 +103,33 @@ namespace WebApplicationCWebForm {
         protected global::System.Web.UI.WebControls.Button Button8;
         
         /// <summary>
+        /// Button12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button12;
+        
+        /// <summary>
+        /// Button13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button13;
+        
+        /// <summary>
+        /// Button14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button14;
+        
+        /// <summary>
         /// hideGridView_bnt control.
         /// </summary>
         /// <remarks>
@@ -247,6 +274,15 @@ namespace WebApplicationCWebForm {
         protected global::System.Web.UI.WebControls.TextBox ShowResult;
         
         /// <summary>
+        /// Button15 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button15;
+        
+        /// <summary>
         /// ShowResult0 control.
         /// </summary>
         /// <remarks>
@@ -256,6 +292,15 @@ namespace WebApplicationCWebForm {
         protected global::System.Web.UI.WebControls.TextBox ShowResult0;
         
         /// <summary>
+        /// Button16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button16;
+        
+        /// <summary>
         /// ShowResult1 control.
         /// </summary>
         /// <remarks>
@@ -263,5 +308,14 @@ namespace WebApplicationCWebForm {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ShowResult1;
+        
+        /// <summary>
+        /// Button17 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button17;
     }
 }

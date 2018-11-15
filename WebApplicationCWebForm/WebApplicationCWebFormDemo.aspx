@@ -46,6 +46,23 @@
             </tr>
              <tr>
                 <td>
+                     
+                    <asp:Button ID="Button12" runat="server" OnClick="Button12_Click" Text="Array Demo" />
+                     
+                 </td>
+                <td>
+                     
+                    <asp:Button ID="Button13" runat="server" Text="Button" />
+                     
+                 </td>
+                <td>
+                      
+                    <asp:Button ID="Button14" runat="server" Text="Button" />
+                      
+                 </td>
+            </tr>
+             <tr>
+                <td>
                     <asp:Button ID="hideGridView_bnt" runat="server" BackColor="#99CCFF" OnClick="hideGridView_bnt_Click" Text="Hide Grid View" Visible="False" />
                     <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Visible="False">
                     </asp:GridView>
@@ -81,12 +98,15 @@
             <tr>
                 <td>
                     <asp:TextBox ID="ShowResult" runat="server" Height="330px" TextMode="MultiLine" Width="185px" OnTextChanged="ShowResult_TextChanged"></asp:TextBox>
+                    <asp:Button ID="Button15" runat="server" OnClick="Button15_Click" Text="Refresh" />
                 </td>
                 <td>
                     <asp:TextBox ID="ShowResult0" runat="server" Height="330px" TextMode="MultiLine" Width="175px" OnTextChanged="ShowResult0_TextChanged"></asp:TextBox>
+                    <asp:Button ID="Button16" runat="server" OnClick="Button16_Click" Text="Refresh" />
                 </td>
                 <td>
-                    <asp:TextBox ID="ShowResult1" runat="server" Height="330px" TextMode="MultiLine" Width="334px"></asp:TextBox>
+                    <asp:TextBox ID="ShowResult1" runat="server" Height="330px" TextMode="MultiLine" Width="334px" OnTextChanged="ShowResult1_TextChanged"></asp:TextBox>
+                    <asp:Button ID="Button17" runat="server" OnClick="Button17_Click" Text="Refresh" />
                 </td>
             </tr>
             <tr>

@@ -395,6 +395,7 @@
     <Compile Include="App_Code\Address.cs" />
     <Compile Include="App_Code\ADOconnection.cs" />
     <Compile Include="App_Code\Anonymous Type Data.cs" />
+    <Compile Include="App_Code\ArrayDemo.cs" />
     <Compile Include="App_Code\ArrayListDemo.cs" />
     <Compile Include="App_Code\Class1.cs" />
     <Compile Include="App_Code\DBconnectionDemo.cs" />
