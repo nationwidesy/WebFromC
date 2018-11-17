@@ -400,7 +400,10 @@
     <Compile Include="App_Code\Class1.cs" />
     <Compile Include="App_Code\DBconnectionDemo.cs" />
     <Compile Include="App_Code\DelegateDemo.cs" />
+    <Compile Include="App_Code\GenericDelegate.cs" />
+    <Compile Include="App_Code\GenericTypeConstraint.cs" />
     <Compile Include="App_Code\SerializationDemo.cs" />
+    <Compile Include="App_Code\WhereClause.cs" />
     <Compile Include="ValidateInputEx2.aspx.cs">
       <DependentUpon>ValidateInputEx2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -447,7 +450,7 @@
     <Compile Include="WebApplicationCWebFormDemo.aspx.designer.cs">
       <DependentUpon>WebApplicationCWebFormDemo.aspx</DependentUpon>
     </Compile>
-    <Content Include="App_Code\EF_DatabaseFirst.cs" />
+    <Compile Include="App_Code\EF_DatabaseFirst.cs" />
     <Compile Include="App_Code\FileHandlingDemo.cs" />
     <Compile Include="App_Code\GenericList.cs" />
     <Compile Include="App_Code\HashtableDemo.cs" />

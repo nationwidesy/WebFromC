@@ -326,5 +326,11 @@ namespace WebApplicationCWebForm
         {
             
         }
+
+        protected void Button13_Click(object sender, EventArgs e)
+        {
+            WhereClause w = new WhereClause();
+            this.ShowResult.Text = w.outPut;
+        }
     } 
 }

@@ -7,3 +7,13 @@ Add Service Reference:
 Discover
 Service1
 OK
+
+
+The WHERE clause in a generic definition specifies constraints on the
+types that are used as arguments for type parameters
+in a generic type, method, delegate, or local function.
+For example, you can declare a generic class
+MyGenericClass
+such that the type parameter T
+implements the IComparable<T> interface
+public class MyGenericClass<T> where T : IComparable<T> {}

@@ -52,7 +52,7 @@
                  </td>
                 <td>
                      
-                    <asp:Button ID="Button13" runat="server" Text="Button" />
+                    <asp:Button ID="Button13" runat="server" Text="Where Clause" OnClick="Button13_Click" />
                      
                  </td>
                 <td>
@@ -98,14 +98,17 @@
             <tr>
                 <td>
                     <asp:TextBox ID="ShowResult" runat="server" Height="330px" TextMode="MultiLine" Width="185px" OnTextChanged="ShowResult_TextChanged"></asp:TextBox>
+                    <br />
                     <asp:Button ID="Button15" runat="server" OnClick="Button15_Click" Text="Refresh" />
                 </td>
                 <td>
                     <asp:TextBox ID="ShowResult0" runat="server" Height="330px" TextMode="MultiLine" Width="175px" OnTextChanged="ShowResult0_TextChanged"></asp:TextBox>
+                    <br />
                     <asp:Button ID="Button16" runat="server" OnClick="Button16_Click" Text="Refresh" />
                 </td>
                 <td>
                     <asp:TextBox ID="ShowResult1" runat="server" Height="330px" TextMode="MultiLine" Width="334px" OnTextChanged="ShowResult1_TextChanged"></asp:TextBox>
+                    <br />
                     <asp:Button ID="Button17" runat="server" OnClick="Button17_Click" Text="Refresh" />
                 </td>
             </tr>
