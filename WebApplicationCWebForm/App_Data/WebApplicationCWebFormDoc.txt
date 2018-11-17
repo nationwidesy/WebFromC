@@ -2,6 +2,28 @@
 http://localhost:63999/WebApplicationCWebFormDemo.aspx
 
 https://github.com/nationwidesy/WebFromC.git
+Visual Studio: 
+1.Team Explorer
+2.Home
+3.Change
+4.Commit All
+5.Snyc
+6.Push
+
+Folder: TortoiseGit
+Git Snyc
+Git Commit -- > master
+Pull
+Fetch
+Push
+Diff
+Merge
+Create Branch
+Show log
+
+
+C# interview questions:
+https://www.c-sharpcorner.com/UploadFile/8ef97c/C-Sharp-net-interview-questions-and-answers/?fbclid=IwAR3dXfGu4We2cIfZG4wUlspOuEuMLhQglyZv3h2CbzA7SRMW27qRefPYivQ
 
 Add Service Reference:
 Discover
