@@ -39,3 +39,5 @@ MyGenericClass
 such that the type parameter T
 implements the IComparable<T> interface
 public class MyGenericClass<T> where T : IComparable<T> {}
+
+11/17/2018 updated at https://github.com/nationwidesy/WebFromC/edit/master/WebApplicationCWebForm/App_Data/WebApplicationCWebFormDoc.txt
